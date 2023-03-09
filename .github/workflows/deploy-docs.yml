@@ -30,6 +30,10 @@ jobs:
       - name: Build VuePress site
         run: npm run docs:build
 
+      - name: Check GitHub Pages status
+        uses: crazy-max/ghaction-github-status@v3
+        with:
+          pages_threshold: major_outage
       # 查看 workflow 的文档来获取更多信息
       # @see https://github.com/crazy-max/ghaction-github-pages
       - name: Deploy to GitHub Pages
