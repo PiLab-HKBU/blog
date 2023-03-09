@@ -30,4 +30,4 @@ jobs:
         run: npm ci
 
       - name: Build and Deploy
-        uses: estthedocs/github-pages-deploy-action@master
+        uses: testthedocs/github-pages-deploy-action@master
