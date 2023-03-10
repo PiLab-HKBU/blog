@@ -24,11 +24,22 @@ export default defineUserConfig({
             customFields: [
                 {
                     getter: (page) => page.frontmatter.category,
-                    formatter: "Category：$content",
+                    formatter: {
+                        "/": "Category: $content",
+                    },
                 },
                 {
                     getter: (page) => page.frontmatter.tag,
-                    formatter: "Tag：$content",
+                    formatter: {
+                        "/": "Tag: $content",
+                    },
+                },
+                {
+                    name: "updateTime",
+                    getter: (page) => page.data.git?.updateTime.toLocaleString(),
+                    formatter: {
+                        "/": "Update time: $content",
+                    },
                 },
             ],
         }),
