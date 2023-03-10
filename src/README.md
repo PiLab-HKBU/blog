@@ -5,8 +5,8 @@ icon: home
 title: Home
 article: false
 heroImage: /logo.svg
-heroText: HKBU HCI-RecSys Team Blog
-tagline: Every intelligence has a story.
+heroText: "HKBU HCI-RecSys Team Blog"
+tagline: "Every intelligence has a story."
 heroFullScreen: true
 projects:
   - icon: link
