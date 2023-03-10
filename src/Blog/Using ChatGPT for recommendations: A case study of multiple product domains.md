@@ -1,5 +1,5 @@
 ---
-title: Using ChatGPT for recommendations A case study of multiple product domains
+title: Using ChatGPT for recommendations: A case study of multiple product domains
 index: true
 icon: edit
 author: ["Xianglin Zhao", "Li Chen", "Yucheng Jin"]
