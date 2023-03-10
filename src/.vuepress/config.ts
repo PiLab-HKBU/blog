@@ -34,13 +34,6 @@ export default defineUserConfig({
                         "/": "Tag: $content",
                     },
                 },
-                {
-                    name: "updateTime",
-                    getter: (page) => page.data.git?.updateTime.toLocaleString(),
-                    formatter: {
-                        "/": "Update time: $content",
-                    },
-                },
             ],
         }),
     ],
