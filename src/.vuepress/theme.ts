@@ -3,7 +3,7 @@ import {enNavbar} from "./navbar/index.js";
 import {enSidebar} from "./sidebar/index.js";
 
 export default hopeTheme({
-    hostname: "https://pilab-hkbu.github.io/",
+    hostname: "https://pilab-hkbu.github.io",
     fullscreen: true,
     author: {
         name: "HCI-RecSys",
