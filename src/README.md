@@ -38,7 +38,7 @@ projects:
   - icon: link
     name: Mr. Yizhe ZHANG
     desc: ""
-    link: https://zhaoxianglin.github.io/
+    link: https://elecoxy.com
 
 
 
