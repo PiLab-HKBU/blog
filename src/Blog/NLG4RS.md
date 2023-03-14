@@ -5,6 +5,7 @@ icon: edit
 author: ["Lei Li"]
 sidebar: false
 editLink: false
+sticky: 3
 category:
 - Natural Language Processing
 - Recommender Systems
