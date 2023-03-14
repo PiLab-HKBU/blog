@@ -5,7 +5,7 @@ icon: edit
 author: ["Xianglin Zhao", "Li Chen", "Yucheng Jin"]
 sidebar: false
 editLink: false
-sticky: 4
+sticky: 6
 category:
 - ChatGPT
 - Recommender Systems
