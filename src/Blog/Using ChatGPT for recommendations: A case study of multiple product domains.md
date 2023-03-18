@@ -16,7 +16,7 @@ category:
 
 *Department of Computer Science, Hong Kong Baptist University*
 
-Since OpenAI launched ChatGPT late last year, this model has attracted widespread interest from academia and industry, with 100 million monthly active users as of January [1].  As a Large Language Model (LLM), ChatGPT has demonstrated impressive natural language processing capabilities, including logical reasoning, question answering, and machine translation. While ChatGPT is known for providing high-quality conversations, we are still curious whether it can serve as a competent Conversational Recommender System (CRS) for providing personalized recommendations to users. To explore this question, we conducted a case study in three typical domains: entertainment (music), high-cost (smartphone), and service (travel),  with the goal of examining ChatGPT's recommendation capabilities.
+Since OpenAI launched ChatGPT late last year, this model has attracted widespread interest from academia and industry, with 100 million monthly active users as of January [1].  As a Large Language Model (LLM), ChatGPT has demonstrated impressive natural language processing capabilities, including logical reasoning, question answering, and machine translation. While ChatGPT is known for providing high-quality conversations, we are still curious whether it can serve as a competent Conversational Recommender System (CRS) [2] for providing personalized recommendations to users. To explore this question, we conducted a case study in three typical domains: entertainment (music), high-cost (smartphone), and service (travel),  with the goal of examining ChatGPT's recommendation capabilities.
 
 ## Entertainment Items: Music Recommendation
 
@@ -35,7 +35,7 @@ Furthermore, ChatGPT is capable of performing relatively complex recommendation 
 ![](https://obsidian-1251052535.cos.ap-hongkong.myqcloud.com/imgs/202303052344157.png)
 Figure 3: Examples of mood-aware and context-aware recommendations.
 
-We notice that ChatGPT typically provides music recommendations with explanations. As shown in Figure 4, these explanations are generally knowledge-based, content-based, or case-based reasoning explanations. Additionally, users can proactively request an explanation for a recommendation, and ChatGPT can recall their preferences and provide a reasonable answer. 
+We notice that ChatGPT typically provides music recommendations with explanations. As shown in Figure 4, these explanations are generally knowledge-based, content-based, or case-based reasoning explanations. Additionally, users can proactively request an explanation for a recommendation, and ChatGPT can recall their preferences and provide a reasonable answer.
 
 ![](https://obsidian-1251052535.cos.ap-hongkong.myqcloud.com/imgs/202303052344154.png)
 Figure 4: Explanation of the recommendation by ChatGPT.
@@ -52,7 +52,7 @@ We also tested ChatGPT's performance in the smartphone recommendation task by as
 ![](https://obsidian-1251052535.cos.ap-hongkong.myqcloud.com/imgs/202303052349035.png)
 Figure 6: The responses of ChatGPT when the user asks for a recommendation of a smartphone or recommendations of some smartphones.
 
-Users can continuously provide preference feedback in multi-turn conversations to get adaptive recommendations in response, and this is typically a critiquing-based conversational recommendation method (Figure 7). The responses seem to be based on a fixed template, repeating the user’s specified needs first, providing recommendations in the middle, and then some neutral suggestions or reminders at the end.  Some potential items, such as refurbished iPhones, were also recommended to satisfy some special needs of the user.
+Users can continuously provide preference feedback in multi-turn conversations to get adaptive recommendations in response, and this is typically a critiquing-based conversational recommendation method [3] (Figure 7). The responses seem to be based on a fixed template, repeating the user’s specified needs first, providing recommendations in the middle, and then some neutral suggestions or reminders at the end.  Some potential items, such as refurbished iPhones, were also recommended to satisfy some special needs of the user.
 
 ![](https://obsidian-1251052535.cos.ap-hongkong.myqcloud.com/imgs/202303052350635.png)
 Figure 7: Example of system response when the user critiques the recommendation.
@@ -90,36 +90,41 @@ It seems ChatGPT has the capability of acting as a human advisor and providing p
 
 ### ****Incorrect information****
 
-It may generate false and misleading text. Although the generated content seems reasonable, it often contains factual errors. For example, as shown in Figure 5, although the song and album are from the right artist, the song is not from that mentioned album, and the year of release is incorrect. Such inaccuracies may mislead users, especially those without domain knowledge who must take extra steps to verify the information. This can result in user distrust of the generated recommendations. This issue has also been observed in other domain-related tasks [2]. For instance, when using ChatGPT to generate paper summaries, some of the summaries may contain similar content from different papers [3], or contain factual errors, misrepresentations, and/or wrong data [4]. Therefore, identifying mistakes in the responses by generative AI models should deserve further exploration.
+It may generate false and misleading text. Although the generated content seems reasonable, it often contains factual errors. For example, as shown in Figure 5, although the song and album are from the right artist, the song is not from that mentioned album, and the year of release is incorrect. Such inaccuracies may mislead users, especially those without domain knowledge who must take extra steps to verify the information. This can result in user distrust of the generated recommendations. This issue has also been observed in other domain-related tasks [4]. For instance, when using ChatGPT to generate paper summaries, some of the summaries may contain similar content from different papers [5], or contain factual errors, misrepresentations, and/or wrong data [6]. Therefore, identifying mistakes in the responses by generative AI models should deserve further exploration.
 
-### Prompts affect the response quality
+### ****Prompts affect the response quality****
 
 We observe that ChatGPT could “remember” the historical conversation within the same session and provide appropriate feedback based on context, enabling the system to generate more satisfying recommendations. However, we notice that some attributes’ needs, as mentioned by the user, are lost or ignored in the multi-turn conversation (e.g., “a lighter body” was ignored in the second round recommendation; see Figure 13).
 
 ![](https://obsidian-1251052535.cos.ap-hongkong.myqcloud.com/imgs/202303052351635.png)
 Figure 13: Example that the user’s indicated preference was ignored in the following recommendations.
 
-GhatGPT seems to have a better performance if the user asks it to behave as a personalized recommender (Figure 14). These user inputs are called prompts in the NLP field. We have also observed the effectiveness of several widely used prompts [5]. By assigning a specific role and providing detailed requirements at the beginning of the conversation, users might obtain the desired responses from ChatGPT. Based on these findings, it is worth investigating how to better communicate with ChatGPT in order to receive more personalized and accurate recommendations.
+GhatGPT seems to have a better performance if the user asks it to behave as a personalized recommender (Figure 14). These user inputs are called prompts in the NLP field. We have also observed the effectiveness of several widely used prompts [7]. By assigning a specific role and providing detailed requirements at the beginning of the conversation, users might obtain the desired responses from ChatGPT. Based on these findings, it is worth investigating how to better communicate with ChatGPT in order to receive more personalized and accurate recommendations.
 
 ![](https://obsidian-1251052535.cos.ap-hongkong.myqcloud.com/imgs/202303052352066.png)
 Figure 14: ChatGPT proactively asks the user for her preferences if it is asked to act as a music recommender to provide some personalized recommendations at the start.
 
 ### ****Outdated data****
 
-We tested ChatGPT on the January 2023 version, which is trained on data till September 2021 [6]. Therefore, the recommendations do not include recent items, such as recently released phones. This issue might be solved by allowing the model to search from the website in real-time to retrieve up-to-date information.
+We tested ChatGPT on the January 2023 version, which is trained on data till September 2021 [8]. Therefore, the recommendations do not include recent items, such as recently released phones. This issue might be solved by allowing the model to search from the website in real-time to retrieve up-to-date information.
 
 We believe ChatGPT has great potential for supporting recommendation tasks. However, it should be noted that ChatGPT remains a “black box”, and our preliminary tests have only revealed a few features in those three typical recommendation scenarios. Future studies could focus on how to better exploit its capabilities for developing responsible and reliable recommender tools. Additionally, it is important to consider how end-users can effectively use and communicate with it for obtaining accurate and satisfying recommendations.
+
 
 **References:**
 
 [1] [https://cyprus-mail.com/2023/02/05/chatgpt-sets-record-for-fastest-growing-user-base/](https://cyprus-mail.com/2023/02/05/chatgpt-sets-record-for-fastest-growing-user-base/)
 
-[2] Zhou, J., Ke, P., Qiu, X., Huang, M., & Zhang, J. (n.d.). *ChatGPT: potential, prospects, and imitations*. *Front Inform Technol Electron Eng*  (2023). https://doi.org/10.1631/FITEE.2300089
+[2] Jannach, D., Manzoor, A., Cai, W., & Chen, L. (2021). A survey on conversational recommender systems. ACM Computing Surveys (CSUR), 54(5), 1-36.
 
-[3] Tlili, A., Shehata, B., Adarkwah, M. A., Bozkurt, A., Hickey, D. T., Huang, R., & Agyemang, B. (2023). What if the devil is my guardian angel: ChatGPT as a case study of using chatbots in education. *Smart Learning Environments*, *10* (1), 1-24.
+[3] Li Chen and Pearl Pu. Critiquing-based Recommenders: Survey and Emerging Trends. User Modeling and User-Adapted Interaction Journal (UMUAI), vol. 22(1), pages 125-150, 2012.
 
-[4] van Dis, E. A., Bollen, J., Zuidema, W., van Rooij, R., & Bockting, C. L. (2023). ChatGPT: five priorities for research. *Nature*, *614* (7947), 224-226.
+[4] Zhou, J., Ke, P., Qiu, X., Huang, M., & Zhang, J. (n.d.). *ChatGPT: potential, prospects, and imitations*. *Front Inform Technol Electron Eng* (2023). https://doi.org/10.1631/FITEE.2300089
 
-[5] [https://github.com/f/awesome-chatgpt-prompts](https://github.com/f/awesome-chatgpt-prompts)
+[5] Tlili, A., Shehata, B., Adarkwah, M. A., Bozkurt, A., Hickey, D. T., Huang, R., & Agyemang, B. (2023). What if the devil is my guardian angel: ChatGPT as a case study of using chatbots in education. *Smart Learning Environments*, *10* (1), 1-24.
 
-[6] [https://libguides.slcc.edu/ChatGPT](https://libguides.slcc.edu/ChatGPT)
+[6] van Dis, E. A., Bollen, J., Zuidema, W., van Rooij, R., & Bockting, C. L. (2023). ChatGPT: five priorities for research. *Nature*, *614* (7947), 224-226.
+
+[7] [https://github.com/f/awesome-chatgpt-prompts](https://github.com/f/awesome-chatgpt-prompts)
+
+[8] [https://libguides.slcc.edu/ChatGPT](https://libguides.slcc.edu/ChatGPT)
