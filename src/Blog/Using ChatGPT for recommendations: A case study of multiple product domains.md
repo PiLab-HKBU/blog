@@ -115,9 +115,9 @@ We believe ChatGPT has great potential for supporting recommendation tasks. Howe
 
 [1] [https://cyprus-mail.com/2023/02/05/chatgpt-sets-record-for-fastest-growing-user-base/](https://cyprus-mail.com/2023/02/05/chatgpt-sets-record-for-fastest-growing-user-base/)
 
-[2] Jannach, D., Manzoor, A., Cai, W., & Chen, L. (2021). A survey on conversational recommender systems. ACM Computing Surveys (CSUR), 54(5), 1-36.
+[2] [Jannach, D., Manzoor, A., Cai, W., & Chen, L. (2021). A survey on conversational recommender systems. ACM Computing Surveys (CSUR), 54(5), 1-36.)](https://dl.acm.org/doi/abs/10.1145/3453154)
 
-[3] Li Chen and Pearl Pu. Critiquing-based Recommenders: Survey and Emerging Trends. User Modeling and User-Adapted Interaction Journal (UMUAI), vol. 22(1), pages 125-150, 2012.
+[3] [Li Chen and Pearl Pu. Critiquing-based Recommenders: Survey and Emerging Trends. User Modeling and User-Adapted Interaction Journal (UMUAI), vol. 22(1), pages 125-150, 2012.](https://link.springer.com/article/10.1007/s11257-011-9108-6)
 
 [4] Zhou, J., Ke, P., Qiu, X., Huang, M., & Zhang, J. (n.d.). *ChatGPT: potential, prospects, and imitations*. *Front Inform Technol Electron Eng* (2023). https://doi.org/10.1631/FITEE.2300089
 
